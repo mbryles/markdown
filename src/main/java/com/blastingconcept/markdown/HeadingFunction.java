@@ -3,6 +3,11 @@ package com.blastingconcept.markdown;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * HeadingFunction
+ *
+ * Implementation of {@link MarkdownFunction} that handles heading tags
+ */
 public class HeadingFunction implements MarkdownFunction {
 
     private static String HEADER_REGEX_PATTERN = "(?<headers>^#{1,6}\\s+)(?<text>.*$)";

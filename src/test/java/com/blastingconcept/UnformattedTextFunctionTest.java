@@ -1,14 +1,14 @@
 package com.blastingconcept;
 
 import com.blastingconcept.markdown.MarkdownFunction;
-import com.blastingconcept.markdown.UnformattedTextMarkdown;
+import com.blastingconcept.markdown.UnformattedTextFunction;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertTrue;
 
 public class UnformattedTextFunctionTest {
 
-    MarkdownFunction unformattedTextFunction = new UnformattedTextMarkdown();
+    MarkdownFunction unformattedTextFunction = new UnformattedTextFunction();
 
     @Test
     public void testBasicMarkdown() {

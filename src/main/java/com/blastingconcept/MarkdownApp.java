@@ -2,7 +2,7 @@ package com.blastingconcept;
 
 import com.blastingconcept.markdown.HeadingFunction;
 import com.blastingconcept.markdown.HyperLinkFunction;
-import com.blastingconcept.markdown.UnformattedTextMarkdown;
+import com.blastingconcept.markdown.UnformattedTextFunction;
 
 import java.io.File;
 import java.io.IOException;
@@ -31,7 +31,7 @@ public class MarkdownApp {
         //command line app...no need for singletons :)
         HeadingFunction headingFunction = new HeadingFunction();
         HyperLinkFunction hyperLinkFunction = new HyperLinkFunction();
-        UnformattedTextMarkdown unformattedTextMarkdown = new UnformattedTextMarkdown();
+        UnformattedTextFunction unformattedTextFunction = new UnformattedTextFunction();
 
         //preprocessing to normalize the text files a bit
 
@@ -54,7 +54,7 @@ public class MarkdownApp {
         // the actual markdown functions in action
         list = cleanedLines.stream().map(str -> headingFunction.markdown(str))
                 .map(str -> hyperLinkFunction.markdown(str))
-                .map(str -> unformattedTextMarkdown.markdown(str))
+                .map(str -> unformattedTextFunction.markdown(str))
                 .collect(Collectors.toList());
 
         //write the output

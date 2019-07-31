@@ -3,6 +3,12 @@ package com.blastingconcept.markdown;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
+/**
+ * HyperLinkFunction
+ *
+ * Implementation of {@link MarkdownFunction} that handles hyper link tags
+ */
 public class HyperLinkFunction implements MarkdownFunction {
 
     private static String HYPERLINK_REGEX_PATTERN =
